@@ -31,4 +31,4 @@ myInt.stop();
  </script>
 ```
  
-That`s it ,Have fun with your lagless interval ;)
+That's it ,Have fun with your lagless interval ;)
