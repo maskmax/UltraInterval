@@ -10,7 +10,7 @@ You can use this library instead of built-in interval to avoid falling behind.
 In this example heavyCounter is the function that you want to run and 1000 is interval time in miliseconds.
 
 ```html
-<script src=interval.js"></script>
+<script src="interval.js"></script>
 <script type="text/javascript">
 window.onload = function () {
  var myInt=new ultraInterval(heavyCounter,1000);
