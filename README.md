@@ -1,8 +1,10 @@
 ### Ultra Interval ###
 >v.0.1
 
-Did this ever happened to you that you left your browser open and after a few minutes the webpage timer fall behind the actual time?
+Did this ever happened to you that you left your browser open and after a few minutes the webpage timer fall behind the actual time? 
+
 The main reason is either your browser( mostly mobile devices and hybrid platforms eg:Cordova) went to power saving mode or the interval function is heavy for the device to keep up with the interval.
+
 You can use this library instead of built-in interval to avoid falling behind.
 
 
