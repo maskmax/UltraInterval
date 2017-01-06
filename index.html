@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/interval.js"></script>
+    <script type="text/javascript">
+
+
+        var timeoutID = window.setInterval(clocktick,1000);
+        var timestart= Math.floor( Date.now()/1000);
+        function clocktick(){
+
+
+            var timenow= Math.floor( Date.now()/1000);
+
+
+            for(xx=timestart;xx<timenow;xx++){
+
+                //timecc();
+                //playcheck();
+
+
+            }
+            timestart= Math.floor( Date.now()/1000);
+        }
+
+        var interval22={
+            inttime:1000,
+set:function(func,inttime){
+            // this.inttime=inttime;
+            this.timestart= Math.floor( Date.now()/this.inttime);
+            this.timenow=Math.floor( Date.now()/this.inttime);
+            var timeoutID = window.setInterval(this.clocktick,inttime);
+        },
+             clocktick:function(){
+                 console.log('tick');
+
+              this.timenow= Math.floor( Date.now()/this.inttime);
+                 console.log(Date.now());
+                 console.log(this.inttime);
+                 console.log(this.timenow);
+                 console.log(this.timestart);
+
+
+                 for(xx=this.timestart;xx<this.timenow;xx++){
+                console.log('tick-mid');
+//func();
+                //timecc();
+                //playcheck();
+
+
+            }
+                 this.timestart= Math.floor( Date.now()/this.inttime);
+                 console.log('tick-end');
+             }
+
+        }
+
+
+function hehe(){
+    console.log('hehe');
+}
+        //hehe();
+
+
+
+        var count=0;
+function heavyCounter(){
+    count++;
+    var h=document.getElementById('hello');
+    for(i=0;i<=100;i++){
+        h.innerHTML=i;
+    }
+    h.innerHTML=count.toString();
+
+}
+
+        var count2=0;
+        function heavyCounter2(){
+            count2++;
+            var h=document.getElementById('hello2');
+            for(i=0;i<=100;i++){
+                h.innerHTML=i;
+            }
+            h.innerHTML=count2.toString();
+        }
+
+        var count3=0;
+        function heavyCounter3(){
+            count3++;
+            var h=document.getElementById('hello3');
+            for(i=0;i<=100;i++){
+                h.innerHTML=i;
+            }
+            h.innerHTML=count3.toString();
+            if(count3==9){
+                me3.stop();
+            }
+        }
+
+
+    </script>
+
+</head>
+<body style="background-color:#999">
+<h1>Bootstrap (default)</h1>
+<p >
+    UltraInterval:
+    <span id="hello"></span>
+</p>
+<p >
+    Simple Interval:
+    <span id="hello2"></span>
+
+</p>
+
+<p >
+    UltraInterval(stop in 9 seconds):
+    <span id="hello3"></span>
+</p>
+
+<script>
+
+    var me=new ultraInterval(heavyCounter,1000);
+    setInterval(heavyCounter2, 1000);
+    var me3=new ultraInterval(heavyCounter3,1000);
+
+</script>
+</body>
+</html>
